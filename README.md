@@ -20,8 +20,9 @@
 * https://choijunsik.github.io/boostcamp_relay08/
 <br>
 
-## 확인된 에러 😥
-- 유사한 사람이 없는 경우, frontend에서 error handling이 되어있지 않음.
+## 예외처리 🤩
+- 유사한 사람이 없는 경우, 예외처리 진행
+  - ![image](https://user-images.githubusercontent.com/13073517/90349275-3cda7780-e074-11ea-8601-cc6981a07102.png) 
 <br>
 
 <hr/>
