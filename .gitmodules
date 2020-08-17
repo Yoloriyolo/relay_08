@@ -1,0 +1,3 @@
+[submodule "fast-aging-api-server"]
+	path = fast-aging-api-server
+	url = https://github.com/rockpell/Fast-AgingGAN.git
