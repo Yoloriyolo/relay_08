@@ -40,11 +40,20 @@ const FaceSearchPage = () => {
   
   const handleClick = async (e) => {
     setToggle(true);
-    const res = await axios.post("https://relay08-server.herokuapp.com/ai/compare-faces", { compared_face:beforeImage });
-    setAfterImage(`data:image/jpeg;base64,${res.data.user_image}`);
-    setImgName(res.data.user_name);
-    setSimilarity(res.data.similarity);
-    setToggle(false);
+    try{
+        const res = await axios.post("https://relay08-server.herokuapp.com/ai/compare-faces", { compared_face:beforeImage });
+        setAfterImage(`data:image/jpeg;base64,${res.data.user_image}`);
+        setImgName(res.data.user_name+'씨 아닐까요? 🤔');
+        setSimilarity(res.data.similarity);
+        setToggle(false);
+
+    }
+    catch(e){
+        setAfterImage(defaultImg);
+        setImgName("유사한 사람을 찾지 못하였습니다!");
+        setSimilarity(0);
+        setToggle(false);
+    }
     // setAfterImage(res.data.image);
   }
 

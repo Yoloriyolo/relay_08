@@ -15,7 +15,7 @@ export default function After({ afterImage, imgName, similarity, toggle }) {
         <ImageWrapper>
             {imgName !== '' && toggle===false ?
                 <div>
-                    <div>{`${imgName}씨 아닐까요? 🤔`}</div>
+                    <div>{`${imgName}`}</div>
                     <div>{`유사도 : ${similarity} %`}</div>
                 </div>
                 :
